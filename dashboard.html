@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - CS Edu App</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <h1>Welcome to the Computer Science Portal</h1>
+    <div class="panels">
+      <div class="panel" onclick="openPopup('recorded')">🎥 Recorded Classes</div>
+      <div class="panel" onclick="openPopup('notebooks')">📚 Updated Notebooks</div>
+      <div class="panel" onclick="openPopup('mock')">📝 Mock Tests</div>
+    </div>
+
+    <!-- Red Line and Description -->
+    <hr class="red-line"/>
+    <div class="description">
+      <h2>About Computer Science</h2>
+      <p>Computer science is the study of algorithms, computational processes, and systems. It involves both theoretical and practical approaches to problem-solving using computers. Topics range from software design, databases, and networking to artificial intelligence and cybersecurity. Learning computer science enables students to build solutions that shape the future. This app is created and credited to <strong>Sandip K. Manna Sir</strong>.</p>
+    </div>
+  </div>
+
+  <!-- Popup Interface -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <div id="popup-title"></div>
+
+      <div id="file-list"></div>
+
+      <div id="upload-section">
+        <label for="file-upload">Upload file:</label>
+        <input type="file" id="file-upload" />
+        <button onclick="uploadFile()">Upload</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
